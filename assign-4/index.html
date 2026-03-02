@@ -1,0 +1,172 @@
+<!--
+*********************************
+ Subject: CGD 210 (Winter 2026)
+ Author: Edilvan E. Falcon
+ Date Created: 2025.02.25
+ Description: Assignment No. 4
+ 
+ Create an page to engage users and then direct them to your product or service page.
+*********************************
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGD210 : Product Landing Page - Assignment 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/styles/styles.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body>
+    <div class="noise"></div>
+
+    <main class="wrap">
+      <section class="shell" aria-label="Jacket landing page">
+        <!-- Left: jacket pitch -->
+        <div class="hero">
+          <div class="badge">
+            Jacket Fit Finder • 45 seconds • One tap to shop
+          </div>
+
+          <h1>
+            Meet the jacket that fits your day —
+            <span
+              style="
+                background: linear-gradient(
+                  90deg,
+                  var(--brand2),
+                  var(--brand1)
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+              "
+            >
+              and your style </span
+            >.
+          </h1>
+
+          <p class="sub">
+            Whether you’re commuting, traveling, or going out at night, our
+            jacket is built for comfort, clean lines, and grab-and-go
+            versatility. Take the quick fit finder to get your best match (style
+            + warmth level + fit).
+          </p>
+
+          <div class="highlights">
+            <div class="pill">
+              <div class="icon">🧵</div>
+              <div>
+                <b>Premium feel</b>
+                <span>Soft, structured fabric that holds its shape.</span>
+              </div>
+            </div>
+            <div class="pill">
+              <div class="icon">🌦️</div>
+              <div>
+                <b>Weather-ready</b>
+                <span
+                  >Designed for real life: wind, light rain, and temperature
+                  swings.</span
+                >
+              </div>
+            </div>
+            <div class="pill">
+              <div class="icon">🧩</div>
+              <div>
+                <b>Easy layering</b>
+                <span>Room where you need it—without looking bulky.</span>
+              </div>
+            </div>
+            <div class="pill">
+              <div class="icon">🧼</div>
+              <div>
+                <b>Low-maintenance</b>
+                <span>Everyday-friendly care so it stays looking sharp.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="micro" aria-label="Trust microcopy">
+            <span class="check"><i></i> Comfort-first fit</span>
+            <span class="check"><i></i> Clean modern look</span>
+            <span class="check"><i></i> Wear it anywhere</span>
+          </div>
+        </div>
+
+        <!-- Right: interactive fit finder -->
+        <div class="card" id="card">
+          <div class="toprow">
+            <div class="steptext" id="stepText">Step 1 of 3</div>
+            <div class="bar" aria-label="Progress">
+              <span id="barFill"></span>
+            </div>
+          </div>
+
+          <div class="q" id="questionBox" aria-live="polite">
+            <h2 id="qTitle">Where will you wear this jacket most?</h2>
+            <div class="options" id="options"></div>
+
+            <div class="actions">
+              <button class="btn secondary" id="backBtn" type="button" disabled>
+                Back
+              </button>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  justify-content: flex-end;
+                "
+              >
+                <span class="hint" id="hint">Choose one to continue</span>
+                <button class="btn primary" id="nextBtn" type="button" disabled>
+                  Next <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="result" id="resultBox">
+            <h3 id="rTitle">Your jacket match is ready ✅</h3>
+            <p id="rDesc"></p>
+
+            <div class="row">
+              <div class="score">
+                <span>Match confidence</span>
+                <div class="meter" aria-label="Match confidence meter">
+                  <span id="meterFill"></span>
+                </div>
+                <span id="confidenceText">—</span>
+              </div>
+
+              <button class="btn primary" id="ctaBtn" type="button">
+                Shop This Match <span aria-hidden="true">↗</span>
+              </button>
+              <img
+                src="assets/images/jacket-2.jpg"
+                width="100%"
+                style="border-radius: 10px"
+              />
+            </div>
+          </div>
+
+          <div class="tiny">
+            Tip: This page will redirect to your jacket product page.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
