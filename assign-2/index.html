@@ -1,0 +1,817 @@
+<!--
+*********************************
+ Subject: CGD 210 (Winter 2026)
+ Author: Edilvan E. Falcon
+ Date Created: 2026.02.17
+ Description: Assignment No. 2
+ ********************************
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CGD 210 | Assignment 2 - Product Page</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="assets/styles/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <a class="brand" href="#top" aria-label="Brand home">
+            <div class="logo" aria-hidden="true"></div>
+            <span>Aurora <small>Outerwear</small></span>
+          </a>
+
+          <nav aria-label="Primary navigation">
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#specs">Specs</a></li>
+
+              <li class="dropdown" id="shopDropdown">
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  id="shopBtn"
+                >
+                  Shop <span class="caret" aria-hidden="true"></span>
+                </button>
+                <div class="menu" role="menu" aria-label="Shop menu">
+                  <a href="#top" role="menuitem">
+                    Aurora Puff Jacket
+                    <small>All-season warmth in a clean silhouette</small>
+                  </a>
+                  <a href="#specs" role="menuitem">
+                    Size & Fit Guide
+                    <small>Find your perfect layering room</small>
+                  </a>
+                  <a href="#faq" role="menuitem">
+                    Shipping & Returns
+                    <small>Fast delivery + easy exchanges</small>
+                  </a>
+                </div>
+              </li>
+
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </nav>
+
+          <div class="nav-right">
+            <a class="btn" href="#specs" aria-label="View size and specs">
+              <span>Size & Specs</span>
+            </a>
+            <a class="btn btn-primary" href="#buy" aria-label="Buy now">
+              <span>Buy Now</span>
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <button
+              class="burger"
+              id="burger"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile panel -->
+        <div
+          class="mobile-panel"
+          id="mobilePanel"
+          aria-label="Mobile navigation"
+        >
+          <div class="mobile-links">
+            <a class="btn" href="#features">Features</a>
+            <a class="btn" href="#specs">Specs</a>
+            <button class="btn" id="mobileShopToggle" type="button">
+              <span>Shop</span><span aria-hidden="true">▾</span>
+            </button>
+            <div
+              id="mobileShopLinks"
+              style="display: none; gap: 10px; flex-direction: column"
+            >
+              <a class="btn" href="#top">Aurora Puff Jacket</a>
+              <a class="btn" href="#specs">Size & Fit Guide</a>
+              <a class="btn" href="#faq">Shipping & Returns</a>
+            </div>
+            <a class="btn" href="#reviews">Reviews</a>
+            <a class="btn btn-primary" href="#buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="container">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <div class="kicker">
+                <span class="pill"
+                  ><span class="dot" aria-hidden="true"></span> Winter-ready •
+                  City-clean</span
+                >
+                <span class="pill">4.8★ Avg Rating</span>
+                <span class="pill">Free Exchanges</span>
+              </div>
+
+              <h1>
+                Aurora <span class="accent">Puff Jacket</span><br />
+                Minimal look. Maximum warmth.
+              </h1>
+
+              <p class="lead">
+                Meet the jacket you’ll reach for every cold morning. The Aurora
+                Puff blends a sleek, low-bulk silhouette with high-loft
+                insulation, wind-blocking fabric, and a cozy stand collar—built
+                for commutes, travel days, and weekend layers.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#buy">Add to Cart</a>
+                <a class="btn" href="#features">See Features</a>
+                <span class="pill" title="Temperature comfort range"
+                  >Comfort range: 25–55°F*</span
+                >
+              </div>
+
+              <div class="meta" aria-label="Key highlights">
+                <div class="card">
+                  <b>HeatLock Loft</b>
+                  <small>High-warmth insulation that stays light</small>
+                </div>
+                <div class="card">
+                  <b>WindGuard Shell</b>
+                  <small>Blocks gusts with a smooth matte finish</small>
+                </div>
+                <div class="card">
+                  <b>Packable Build</b>
+                  <small>Compresses easy for carry-ons</small>
+                </div>
+              </div>
+
+              <p
+                style="
+                  margin: 12px 0 0;
+                  color: rgba(91, 102, 122, 0.9);
+                  font-weight: 700;
+                  font-size: 0.9rem;
+                  line-height: 1.5;
+                "
+              >
+                *Comfort range varies by layering, wind, and activity.
+              </p>
+            </div>
+
+            <div class="gallery" aria-label="Product gallery">
+              <div class="gallery-top">
+                <span class="badge">Limited Drop • Matte Black</span>
+                <div class="price">
+                  <strong>$129</strong>
+                  <del>$169</del>
+                  <span
+                    class="pill"
+                    style="border-color: rgba(255, 122, 24, 0.25)"
+                    >Save 24%</span
+                  >
+                </div>
+              </div>
+
+              <div class="gallery-main">
+                <div class="thumbs" aria-label="Image thumbnails">
+                  <button
+                    class="thumb"
+                    type="button"
+                    data-img="08bd0002-c73b-4886-a94c-7be164b29610.jpg"
+                    aria-label="View front image"
+                  >
+                    <img
+                      src="assets/images/front.jpg"
+                      alt="Front view thumbnail"
+                    />
+                  </button>
+                  <button
+                    class="thumb"
+                    type="button"
+                    data-img="image2.jpg"
+                    aria-label="View front and back image"
+                  >
+                    <img
+                      src="assets/images/back.jpg"
+                      alt="Front and back view thumbnail"
+                    />
+                  </button>
+                </div>
+
+                <div class="panel" id="buy">
+                  <div
+                    style="
+                      display: flex;
+                      gap: 10px;
+                      align-items: center;
+                      justify-content: space-between;
+                      flex-wrap: wrap;
+                    "
+                  >
+                    <div>
+                      <b style="font-size: 1.05rem">Aurora Puff Jacket</b><br />
+                      <small style="color: var(--muted); font-weight: 800"
+                        >Matte Black • Unisex</small
+                      >
+                    </div>
+                    <span
+                      class="pill"
+                      style="
+                        background: rgba(21, 101, 255, 0.07);
+                        border-color: rgba(21, 101, 255, 0.18);
+                      "
+                    >
+                      Ships in 1–2 business days
+                    </span>
+                  </div>
+
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 10px;
+                      margin-top: 12px;
+                    "
+                  >
+                    <label
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                        font-weight: 900;
+                      "
+                    >
+                      Size
+                      <select
+                        id="sizeSelect"
+                        style="
+                          padding: 12px 12px;
+                          border-radius: 14px;
+                          border: 1px solid var(--line);
+                          font-weight: 800;
+                        "
+                      >
+                        <option value="S">Small</option>
+                        <option value="M" selected>Medium</option>
+                        <option value="L">Large</option>
+                        <option value="XL">XL</option>
+                      </select>
+                    </label>
+
+                    <label
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                        font-weight: 900;
+                      "
+                    >
+                      Quantity
+                      <select
+                        id="qtySelect"
+                        style="
+                          padding: 12px 12px;
+                          border-radius: 14px;
+                          border: 1px solid var(--line);
+                          font-weight: 800;
+                        "
+                      >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <div
+                    style="
+                      display: flex;
+                      gap: 10px;
+                      flex-wrap: wrap;
+                      margin-top: 12px;
+                    "
+                  >
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      id="addToCartBtn"
+                      style="flex: 1; min-width: 180px"
+                    >
+                      Add to Cart
+                      <span aria-hidden="true">🛒</span>
+                    </button>
+                    <button
+                      class="btn"
+                      type="button"
+                      id="wishlistBtn"
+                      style="flex: 1; min-width: 180px"
+                    >
+                      Save
+                      <span aria-hidden="true">♡</span>
+                    </button>
+                  </div>
+
+                  <div
+                    id="toast"
+                    style="
+                      display: none;
+                      margin-top: 12px;
+                      padding: 12px;
+                      border-radius: 14px;
+                      border: 1px solid rgba(255, 122, 24, 0.25);
+                      background: rgba(255, 122, 24, 0.08);
+                      font-weight: 800;
+                      color: rgba(14, 20, 32, 0.82);
+                    "
+                  >
+                    Added to cart!
+                  </div>
+
+                  <p
+                    style="
+                      margin: 12px 0 0;
+                      color: rgba(91, 102, 122, 0.95);
+                      font-weight: 700;
+                      line-height: 1.55;
+                    "
+                  >
+                    Designed for clean layering: tees to hoodies. Two zip
+                    pockets keep hands warm and essentials secure.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features">
+          <div class="section-title">
+            <div>
+              <h2>Why you’ll love it</h2>
+              <p>
+                Performance warmth without the “marshmallow” bulk—built for real
+                life and clean outfits.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="feature">
+              <div class="icon" aria-hidden="true">⛨</div>
+              <h3>WindGuard matte shell</h3>
+              <p>
+                Smooth, low-noise fabric that cuts chilly gusts and resists
+                light drizzle—perfect for city walks and cold commutes.
+              </p>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🔥</div>
+              <h3>HeatLock insulation</h3>
+              <p>
+                High-loft fill traps warmth efficiently while staying
+                lightweight—so you stay comfortable indoors and out.
+              </p>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🧊</div>
+              <h3>Stand collar comfort</h3>
+              <p>
+                A soft, structured collar seals in heat around your neck without
+                needing a scarf every day.
+              </p>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🧳</div>
+              <h3>Travel-friendly pack</h3>
+              <p>
+                Compresses easily in a backpack or carry-on—your “just in case”
+                layer that’s actually worth bringing.
+              </p>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🔒</div>
+              <h3>Secure zip pockets</h3>
+              <p>
+                Keep phone, keys, and wallet safe with smooth zippers and deep
+                pocket bags that don’t spill when you sit.
+              </p>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🧵</div>
+              <h3>Clean quilt lines</h3>
+              <p>
+                Balanced baffles keep insulation evenly distributed for
+                consistent warmth and a modern, tailored look.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="specs">
+          <div class="section-title">
+            <div>
+              <h2>Specs & fit</h2>
+              <p>
+                Everything you need to pick the right size and know what you’re
+                getting.
+              </p>
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="panel">
+              <h3 style="margin: 0 0 10px; font-size: 1.1rem">
+                Product details
+              </h3>
+              <table class="specs" aria-label="Product specifications table">
+                <tr>
+                  <td>Fit</td>
+                  <td>
+                    Regular fit with room for a hoodie; true-to-size for most.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Warmth level</td>
+                  <td>
+                    Everyday winter warmth (best with light-to-mid layering).
+                  </td>
+                </tr>
+                <tr>
+                  <td>Shell</td>
+                  <td>Wind-resistant woven with a soft matte finish.</td>
+                </tr>
+                <tr>
+                  <td>Insulation</td>
+                  <td>
+                    High-loft synthetic fill engineered for warmth-to-weight
+                    balance.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Features</td>
+                  <td>
+                    Full-zip front, stand collar, elastic cuffs, two zip hand
+                    pockets.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Care</td>
+                  <td>
+                    Machine wash cold, gentle cycle; tumble low with clean
+                    tennis balls for loft.
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="panel">
+              <h3 style="margin: 0 0 10px; font-size: 1.1rem">
+                Size guide (quick)
+              </h3>
+              <p
+                style="
+                  margin: 0 0 12px;
+                  color: rgba(14, 20, 32, 0.74);
+                  font-weight: 700;
+                  line-height: 1.55;
+                "
+              >
+                Prefer a closer fit? Size down. Want extra room for thick
+                hoodies? Size up.
+              </p>
+
+              <div style="display: grid; gap: 10px">
+                <div class="pill" style="justify-content: space-between">
+                  <span>Small</span
+                  ><span style="color: var(--muted); font-weight: 900"
+                    >Chest 36–38"</span
+                  >
+                </div>
+                <div class="pill" style="justify-content: space-between">
+                  <span>Medium</span
+                  ><span style="color: var(--muted); font-weight: 900"
+                    >Chest 39–41"</span
+                  >
+                </div>
+                <div class="pill" style="justify-content: space-between">
+                  <span>Large</span
+                  ><span style="color: var(--muted); font-weight: 900"
+                    >Chest 42–44"</span
+                  >
+                </div>
+                <div class="pill" style="justify-content: space-between">
+                  <span>XL</span
+                  ><span style="color: var(--muted); font-weight: 900"
+                    >Chest 45–48"</span
+                  >
+                </div>
+              </div>
+
+              <div
+                style="
+                  margin-top: 14px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a class="btn" href="#faq">Shipping & returns</a>
+                <a class="btn btn-primary" href="#buy">Get yours</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews">
+          <div class="section-title">
+            <div>
+              <h2>Customer reviews</h2>
+              <p>
+                Real-world feedback from people who wanted warmth that still
+                looks sharp.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="panel">
+              <div class="review">
+                <div class="avatar" aria-hidden="true">JM</div>
+                <div>
+                  <b>“Warm without looking huge.”</b>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <p>
+                    I can wear it on the train, into the office, and it still
+                    looks clean. Collar is super cozy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="review">
+                <div class="avatar" aria-hidden="true">AR</div>
+                <div>
+                  <b>“Perfect travel jacket.”</b>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <p>
+                    Packs down easily and doesn’t feel crinkly. Pockets are deep
+                    and zippers glide smoothly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="review">
+                <div class="avatar" aria-hidden="true">KL</div>
+                <div>
+                  <b>“Great for layering.”</b>
+                  <div class="stars" aria-label="4 star rating">★★★★☆</div>
+                  <p>
+                    Medium fits true. With a hoodie it’s still comfortable.
+                    Would buy again.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq">
+          <div class="section-title">
+            <div>
+              <h2>FAQ</h2>
+              <p>Quick answers on sizing, care, shipping, and returns.</p>
+            </div>
+          </div>
+
+          <details>
+            <summary>
+              Is it waterproof?
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p>
+              It’s designed to handle light drizzle and snow flurries. For heavy
+              rain, layer with a dedicated rain shell.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How should it fit?
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Regular fit: comfortable over a tee or hoodie. If you’re between
+              sizes and want a closer look, size down.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can I machine wash it?
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Yes—cold wash, gentle cycle. Tumble low with clean tennis balls to
+              restore loft (or air dry and shake out).
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What’s your return policy?
+              <span class="plus" aria-hidden="true">+</span>
+            </summary>
+            <p>
+              30-day returns and free exchanges. Try it on indoors, keep it
+              clean, and you’re good.
+            </p>
+          </details>
+        </section>
+
+        <section>
+          <div
+            class="panel"
+            style="
+              border-radius: 26px;
+              padding: 18px;
+              background: linear-gradient(
+                135deg,
+                rgba(21, 101, 255, 0.1),
+                rgba(255, 122, 24, 0.1),
+                rgba(255, 255, 255, 0.85)
+              );
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 14px;
+                flex-wrap: wrap;
+              "
+            >
+              <div>
+                <h2 style="margin: 0; font-size: 1.5rem">
+                  Ready for your go-to winter layer?
+                </h2>
+                <p
+                  style="
+                    margin: 8px 0 0;
+                    color: rgba(14, 20, 32, 0.74);
+                    font-weight: 700;
+                    line-height: 1.55;
+                  "
+                >
+                  Clean matte black, warm loft, and a stand collar that feels
+                  like built-in comfort.
+                </p>
+              </div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                <a class="btn" href="#specs">Check sizing</a>
+                <a class="btn btn-primary" href="#buy">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand" style="gap: 10px">
+              <div class="logo" aria-hidden="true"></div>
+              <span>Aurora <small>Outerwear</small></span>
+            </div>
+            <p class="fine">
+              Built for everyday cold: minimal design, practical warmth, and
+              travel-friendly comfort. Primary colors:
+              <span style="font-weight: 900; color: var(--blue)">Blue</span> +
+              <span style="font-weight: 900; color: var(--orange)">Orange</span
+              >.
+            </p>
+            <p class="fine" style="font-size: 0.85rem">
+              Tip: Save this file as <b>index.html</b> and keep the two jacket
+              images in the same folder.
+            </p>
+          </div>
+
+          <div class="links" aria-label="Footer links">
+            <a class="chip" href="#features">Features</a>
+            <a class="chip" href="#specs">Specs</a>
+            <a class="chip" href="#reviews">Reviews</a>
+            <a class="chip" href="#faq">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Dropdown (desktop)
+      const dd = document.getElementById("shopDropdown");
+      const shopBtn = document.getElementById("shopBtn");
+
+      shopBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = dd.classList.toggle("open");
+        shopBtn.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      document.addEventListener("click", () => {
+        if (dd?.classList.contains("open")) {
+          dd.classList.remove("open");
+          shopBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Mobile menu
+      const burger = document.getElementById("burger");
+      const mobilePanel = document.getElementById("mobilePanel");
+
+      burger?.addEventListener("click", () => {
+        const active = burger.classList.toggle("active");
+        burger.setAttribute("aria-expanded", String(active));
+        mobilePanel.style.display = active ? "block" : "none";
+      });
+
+      // Mobile shop toggle
+      const mobileShopToggle = document.getElementById("mobileShopToggle");
+      const mobileShopLinks = document.getElementById("mobileShopLinks");
+      mobileShopToggle?.addEventListener("click", () => {
+        const isOpen = mobileShopLinks.style.display !== "none";
+        mobileShopLinks.style.display = isOpen ? "none" : "flex";
+      });
+
+      // Gallery thumbnails
+      const mainImage = document.getElementById("mainImage");
+      document.querySelectorAll(".thumb").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const src = btn.getAttribute("data-img");
+          if (src && mainImage) {
+            mainImage.src = src;
+            mainImage.alt = src.includes("image2")
+              ? "Aurora Puff Jacket front and back view"
+              : "Aurora Puff Jacket front view";
+          }
+        });
+      });
+
+      // Fake cart/wishlist toasts
+      const toast = document.getElementById("toast");
+      const addToCartBtn = document.getElementById("addToCartBtn");
+      const wishlistBtn = document.getElementById("wishlistBtn");
+
+      function showToast(message) {
+        if (!toast) return;
+        toast.textContent = message;
+        toast.style.display = "block";
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(
+          () => (toast.style.display = "none"),
+          2200,
+        );
+      }
+
+      addToCartBtn?.addEventListener("click", () => {
+        const size = document.getElementById("sizeSelect")?.value || "M";
+        const qty = document.getElementById("qtySelect")?.value || "1";
+        showToast(`Added to cart • Size ${size} • Qty ${qty}`);
+      });
+
+      wishlistBtn?.addEventListener("click", () =>
+        showToast("Saved to your wishlist ♡"),
+      );
+    </script>
+  </body>
+</html>
